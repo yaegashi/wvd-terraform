@@ -10,9 +10,13 @@ variable "vm" {
     size                 = string
     storage_account_type = string
     license_type         = string
-    //    image_id             = string
-    subnet_id  = string
-    gpu_driver = string
+    image_publisher      = string
+    image_offer          = string
+    image_sku            = string
+    image_version        = string
+    image_id             = string
+    subnet_id            = string
+    gpu_driver           = string
   })
 }
 

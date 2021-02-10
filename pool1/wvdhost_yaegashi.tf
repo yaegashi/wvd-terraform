@@ -8,9 +8,13 @@ module "yaegashi" {
     size                 = "Standard_D2as_v4"
     storage_account_type = "Premium_LRS"
     license_type         = "Windows_Client"
-    //    image_id             = data.azurerm_image.wvd.id
-    subnet_id  = data.azurerm_subnet.wvd.id
-    gpu_driver = ""
+    image_publisher      = "MicrosoftWindowsServer"
+    image_offer          = "WindowsServer"
+    image_sku            = "2019-Datacenter"
+    image_version        = "latest"
+    image_id             = ""
+    subnet_id            = data.azurerm_subnet.wvd.id
+    gpu_driver           = ""
   }
   adjoin = var.adjoin
   hpjoin = {

@@ -20,11 +20,10 @@ resource "azurerm_windows_virtual_machine" "wvdhost" {
     owner = var.owner
   }
   source_image_reference {
-    publisher = "MicrosoftWindowsServer"
-    offer     = "WindowsServer"
-    sku       = "2019-Datacenter"
-    version   = "latest"
-
+    publisher = var.vm.image_publisher
+    offer     = var.vm.image_offer
+    sku       = var.vm.image_sku
+    version   = var.vm.image_version
   }
   lifecycle {
     ignore_changes = [name, size, source_image_id, license_type, admin_username, admin_password, os_disk, identity, tags]
