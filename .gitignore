@@ -1,0 +1,6 @@
+/.vscode
+.terraform
+*.tfstate
+*.tfstate.backup
+local*.auto.tfvars
+local*.auto.tfvars.json
